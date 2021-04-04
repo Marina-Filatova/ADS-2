@@ -11,15 +11,13 @@ return count;
 }
 
 int countPairs2(int *arr, int len, int value) {
-int count = 0, left = 0, right = len;
-while (true)
-{
-if ((arr[right] > value) || (arr[left] + arr[right] > value)) {
-right--;
-}
-else {
-break;
-}
+int count = 0, left = 0, right = len, middle;
+while (left < right - 1) {
+middle = (left + right) / 2;
+if (arr[middle] <= value)
+left = middle;
+else
+right = middle;
 }
 
 len = right;
