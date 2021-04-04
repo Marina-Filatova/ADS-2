@@ -40,7 +40,6 @@ else
 right = middle;
 }
 len = right;
- 
 int count = 0;
 for (int i = 0; i < len - 1; i++) {
 int left = i, right = len;
